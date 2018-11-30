@@ -15,7 +15,7 @@ public class App {
         javaScriptLinter(aPath);
     }
 
-    protected static void javaScriptLinter(Path sourceFile) {
+    public static void javaScriptLinter(Path sourceFile) {
         try (BufferedReader reader = Files.newBufferedReader(sourceFile)) {
             String currentLine = "";
             int lineNumber = 0;
