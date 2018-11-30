@@ -1,3 +1,9 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class App {
 
     /**
@@ -5,6 +11,25 @@ public class App {
      * @param args Input args.
      */
     public static void main(String[] args) {
+        Path aPath = Paths.get("resources/gates.js");
+        javaScriptLinter(aPath);
+    }
 
+    protected static void javaScriptLinter(Path sourceFile) {
+        try (BufferedReader reader = Files.newBufferedReader(sourceFile)) {
+            String currentLine = "";
+            int lineNumber = 0;
+            while (currentLine != null) {
+                if (!currentLine.isEmpty() && !currentLine.endsWith("{") && !currentLine.endsWith("}")
+                        && !currentLine.contains("if") && !currentLine.contains("else")
+                        && !currentLine.endsWith(";")) {
+                    System.out.println("Line " + lineNumber + ": Missing semicolon");
+                }
+                lineNumber++;
+                currentLine = reader.readLine();
+            }
+        }
+        catch (IOException e) {
+        }
     }
 }
