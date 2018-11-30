@@ -76,19 +76,19 @@ captures/
 
 *.iml
 
-.idea/workspace.xml
+**/**/.idea/workspace.xml
 
-.idea/tasks.xml
+**/**/.idea/tasks.xml
 
-.idea/gradle.xml
+**/**/.idea/gradle.xml
 
-.idea/assetWizardSettings.xml
+**/**/.idea/assetWizardSettings.xml
 
-.idea/dictionaries
+**/**/.idea/dictionaries
 
-.idea/libraries
+**/**/.idea/libraries
 
-.idea/caches
+**/**/.idea/caches
 
 
 
@@ -232,39 +232,39 @@ obj/
 
 # User-specific configurations
 
-.idea/caches/
+**/**/.idea/caches/
 
-.idea/libraries/
+**/**/.idea/libraries/
 
-.idea/shelf/
+**/**/.idea/shelf/
 
-.idea/.name
+**/**/.idea/.name
 
-.idea/compiler.xml
+**/**/.idea/compiler.xml
 
-.idea/copyright/profiles_settings.xml
+**/**/.idea/copyright/profiles_settings.xml
 
-.idea/encodings.xml
+**/**/.idea/encodings.xml
 
-.idea/misc.xml
+**/**/.idea/misc.xml
 
-.idea/modules.xml
+**/**/.idea/modules.xml
 
-.idea/scopes/scope_settings.xml
+**/**/.idea/scopes/scope_settings.xml
 
-.idea/vcs.xml
+**/**/.idea/vcs.xml
 
-.idea/jsLibraryMappings.xml
+**/**/.idea/jsLibraryMappings.xml
 
-.idea/datasources.xml
+**/**/.idea/datasources.xml
 
-.idea/dataSources.ids
+**/**/.idea/dataSources.ids
 
-.idea/sqlDataSources.xml
+**/**/.idea/sqlDataSources.xml
 
-.idea/dynamic.xml
+**/**/.idea/dynamic.xml
 
-.idea/uiDesigner.xml
+**/**/.idea/uiDesigner.xml
 
 
 
@@ -336,7 +336,7 @@ atlassian-ide-plugin.xml
 
 # Mongo Explorer plugin
 
-.idea/mongoSettings.xml
+**/**/.idea/mongoSettings.xml
 
 
 
@@ -370,41 +370,41 @@ fabric.properties
 
 # User-specific stuff
 
-.idea/**/workspace.xml
+**/**/.idea/**/workspace.xml
 
-.idea/**/tasks.xml
+**/**/.idea/**/tasks.xml
 
-.idea/**/usage.statistics.xml
+**/**/.idea/**/usage.statistics.xml
 
-.idea/**/dictionaries
+**/**/.idea/**/dictionaries
 
-.idea/**/shelf
+**/**/.idea/**/shelf
 
 
 
 # Sensitive or high-churn files
 
-.idea/**/dataSources/
+**/**/.idea/**/dataSources/
 
-.idea/**/dataSources.ids
+**/**/.idea/**/dataSources.ids
 
-.idea/**/dataSources.local.xml
+**/**/.idea/**/dataSources.local.xml
 
-.idea/**/sqlDataSources.xml
+**/**/.idea/**/sqlDataSources.xml
 
-.idea/**/dynamic.xml
+**/**/.idea/**/dynamic.xml
 
-.idea/**/uiDesigner.xml
+**/**/.idea/**/uiDesigner.xml
 
-.idea/**/dbnavigator.xml
+**/**/.idea/**/dbnavigator.xml
 
 
 
 # Gradle
 
-.idea/**/gradle.xml
+**/**/.idea/**/gradle.xml
 
-.idea/**/libraries
+**/**/.idea/**/libraries
 
 
 
@@ -432,7 +432,7 @@ cmake-build-*/
 
 # Mongo Explorer plugin
 
-.idea/**/mongoSettings.xml
+**/**/.idea/**/mongoSettings.xml
 
 
 
@@ -454,7 +454,7 @@ cmake-build-*/
 
 # Cursive Clojure plugin
 
-.idea/replstate.xml
+**/**/.idea/replstate.xml
 
 
 
@@ -464,7 +464,7 @@ cmake-build-*/
 
 # Editor-based Rest Client
 
-.idea/httpRequests
+**/**/.idea/httpRequests
 
 
 
@@ -486,7 +486,7 @@ cmake-build-*/
 
 # Sonarlint plugin
 
-.idea/sonarlint
+**/**/.idea/sonarlint
 
 
 
