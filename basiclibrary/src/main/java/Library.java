@@ -25,10 +25,7 @@ public class Library {
         int[] returnArray = new int[timesToRoll];
         Random r = new Random();
         for (int i = 0; i < timesToRoll; i++) {
-            int ni =  r.nextInt(6) + 1;
-            System.out.println(ni);
-            returnArray[i] = ni;
-            //returnArray[i] = r.nextInt(5) + 1;
+            returnArray[i] = r.nextInt(6) + 1;
         }
         return returnArray;
     }
