@@ -9,6 +9,7 @@ class Bitmap {
 
     private BufferedImage bitmap;
 
+    // The valid transforms
     public enum Transform {
         RANDOMIZE, BLACK_AND_WHITE,
         FLIP_VERTICAL, FLIP_HORIZONTAL
@@ -23,7 +24,9 @@ class Bitmap {
     }
 
     /**
-     *
+     * This application declares via an enum, the valid transforms it can perform. With this design, this library can grow
+     * over time, and consumers of this library that operate dynamically from the enum, will simply work automatically with
+     * new transforms as they are built out.
      * @param transform The type of transform to perform.
      */
     void transform(Transform transform) {
@@ -44,15 +47,15 @@ class Bitmap {
     }
 
     /**
-     *
+     * Saves this bitmap out to the file specified by targetPath.
      * @param targetPath The Path object to which to write this bitmap object.
      */
     void saveToFile(Path targetPath) throws IOException {
-        ImageIO.write(bitmap, "bmp", targetPath.toFile()); //TODO Why is this printing to console?
+        ImageIO.write(bitmap, "bmp", targetPath.toFile());
     }
 
     /**
-     *
+     * Sets each pixel's RGB values to a random value between 0 and 255.
      */
     private void performRandomizeTransform() {
         Random r = new Random();
@@ -72,7 +75,8 @@ class Bitmap {
     }
 
     /**
-     *
+     * Converts the bitmap to black and white. The range is split in half based on the sum of the red,
+     * green and blue values. if (red + blue + green < 382 => white. Otherwise black.
      */
     private void performBlackAndWhiteTransform() {
         int rgbSum;
@@ -92,7 +96,7 @@ class Bitmap {
     }
 
     /**
-     *
+     * Reverses the bitmap across a vertical pivot point at the center.
      */
     private void performFlipVerticalTransform() {
         for (int x = 0; x < bitmap.getWidth(); x++) {
@@ -105,7 +109,7 @@ class Bitmap {
     }
 
     /**
-     *
+     * Reverses the bitmap across a horizontal pivot point at the center.
      */
     private void performFlipHorizontalTransform() {
         for (int y = 0; y < bitmap.getHeight(); y++) {
