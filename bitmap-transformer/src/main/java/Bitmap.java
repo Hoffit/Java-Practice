@@ -14,36 +14,46 @@ class Bitmap {
         FLIP_VERTICAL, FLIP_HORIZONTAL
     }
 
-    Bitmap(Path bitmapPath) {
-        try {
-            this.bitmap = ImageIO.read(bitmapPath.toFile());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    /**
+     * Constructor
+     * @param bitmapPath The image file.
+     */
+    Bitmap(Path bitmapPath) throws IOException {
+        this.bitmap = ImageIO.read(bitmapPath.toFile());
     }
 
+    /**
+     *
+     * @param transform The type of transform to perform.
+     */
     void transform(Transform transform) {
         switch (transform) {
             case RANDOMIZE:
                 performRandomizeTransform();
+                break;
             case BLACK_AND_WHITE:
                 performBlackAndWhiteTransform();
+                break;
             case FLIP_VERTICAL:
                 performFlipVerticalTransform();
+                break;
             case FLIP_HORIZONTAL:
                 performFlipHorizontalTransform();
+                break;
         }
     }
 
-    void saveToFile(Path targetPath) {
-
-        try {
-            ImageIO.write(bitmap, "bmp", targetPath.toFile());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    /**
+     *
+     * @param targetPath The Path object to which to write this bitmap object.
+     */
+    void saveToFile(Path targetPath) throws IOException {
+        ImageIO.write(bitmap, "bmp", targetPath.toFile()); //TODO Why is this printing to console?
     }
 
+    /**
+     *
+     */
     private void performRandomizeTransform() {
         Random r = new Random();
         Color newColor;
@@ -61,6 +71,9 @@ class Bitmap {
         }
     }
 
+    /**
+     *
+     */
     private void performBlackAndWhiteTransform() {
         int rgbSum;
         Color color;
@@ -78,6 +91,9 @@ class Bitmap {
         }
     }
 
+    /**
+     *
+     */
     private void performFlipVerticalTransform() {
         for (int x = 0; x < bitmap.getWidth(); x++) {
             for (int y = 0; y < bitmap.getHeight() / 2; y++) {
@@ -88,6 +104,9 @@ class Bitmap {
         }
     }
 
+    /**
+     *
+     */
     private void performFlipHorizontalTransform() {
         for (int y = 0; y < bitmap.getHeight(); y++) {
             for (int x = 0; x < bitmap.getWidth() / 2; x++) {
