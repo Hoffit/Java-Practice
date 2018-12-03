@@ -15,7 +15,7 @@ public class App {
         javaScriptLinter(aPath);
     }
 
-    public static void javaScriptLinter(Path sourceFile) {
+    private static void javaScriptLinter(Path sourceFile) {
         try (BufferedReader reader = Files.newBufferedReader(sourceFile)) {
             String currentLine = "";
             int lineNumber = 0;
@@ -30,6 +30,7 @@ public class App {
             }
         }
         catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 }
