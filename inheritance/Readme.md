@@ -12,3 +12,5 @@ There are two test classes:
 - RestaurantTest.java
 - ReviewTest.java
 
+From command line, you can build and run the tests:
+`./gradlew test`
