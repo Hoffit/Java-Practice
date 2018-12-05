@@ -18,4 +18,12 @@ public class Review {
     public double getRating() {
         return rating;
     }
+
+    public String getReview() {
+        return review;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
 }
