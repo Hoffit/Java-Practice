@@ -15,5 +15,7 @@ There are two four test classes with dozens of asserts:
 - ShopTest.java
 - TheaterTest.java
 
-From command line, you can build and run the tests:
+From windows command line, you can build and run the tests:
 `./gradlew test`
+
+Otherwise, run the tests from within IntelliJ.
